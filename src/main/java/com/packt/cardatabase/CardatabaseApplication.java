@@ -47,7 +47,7 @@ public class CardatabaseApplication implements CommandLineRunner {
 				"ADF-1121", 2021, 59000, owner1);
 		Car car2 = new Car("Nissan", "Leaf", "White", 
 				"SSJ-3002", 2019, 29000, owner2);
-		Car car3 = new Car("Toyota", "Prius", "Silver", 
+		Car car3 = new Car("Polo", "GTI", "Red", 
 				"KKO-0212", 2020, 39000, owner2);
 		repository.saveAll(Arrays.asList(car1, car2, car3));
                   
