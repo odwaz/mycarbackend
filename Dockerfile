@@ -1,7 +1,6 @@
-# Use Java 1.8
-FROM openjdk:1.8-jdk
-
-#COPY JAR FILE
-COPY target/aws-cardatabase-0.0.2-.jar cardatabase-0.0.2-.jar
-
-ENTRYPOINT ["java","-jar","/cardatabase-0.0.2-.jar"]
+FROM adoptopenjdk/openjdk11:latest
+VOLUME /tmp
+EXPOSE 8080
+ARG JAR FILE
+COPY target/cardatabase-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT [“java","-jar","/app.jar"]
