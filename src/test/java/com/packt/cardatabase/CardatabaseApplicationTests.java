@@ -2,20 +2,23 @@ package com.packt.cardatabase;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
 import com.packt.cardatabase.web.CarController;
 
+@RunWith(SpringRunner.class)
 @SpringBootTest
-class CardatabaseApplicationTests {
+public class CardatabaseApplicationTests {
 	@Autowired
 	private CarController controller;
 
-@Test
-@DisplayName("First Test Case")
-void contextLoads() {
-assertThat(controller).isNotNull();
-}
+	@Test
+	public void contextLoads() {
+		assertThat(controller).isNotNull();
+	}
+
 }
